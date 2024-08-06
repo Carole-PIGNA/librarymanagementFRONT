@@ -1,0 +1,31 @@
+.header {
+    background-color: beige ;
+    height: 3em;
+    color: black;
+    margin-top: 0;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 30%;
+    padding-top: 1em;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;  
+}
+
+.nav-link :visited{
+    text-decoration: none;
+
+}

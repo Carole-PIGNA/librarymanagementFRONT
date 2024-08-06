@@ -1,0 +1,11 @@
+<div *ngIf="livreList && livreList.length > 0; else noData">
+    <ul>
+      <li *ngFor="let livre of livreList">
+        {{ livre.titre }} by {{ livre.auteur }}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noData>
+    <p>No books available.</p>
+  </ng-template>
+  
