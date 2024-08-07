@@ -1,8 +1,16 @@
+<h2> Liste des livres de la bibliothèque</h2>
 <div *ngIf="livreList && livreList.length > 0; else noData">
     <ul>
-      <li *ngFor="let livre of livreList">
-        {{ livre.titre }} by {{ livre.auteur }}
-      </li>
+        <li *ngFor="let livre of livreList">
+            <div>
+                <img [src]="getImageUrl(livre.imagePath)" alt="{{ livre.title }}" style="width: 100px; height: auto;">
+                <h3>{{ livre.title }} by {{ livre.author }}</h3>
+                <p>Publication Date: {{ livre.pub_date | date }}</p>
+                <p>Genre: {{ livre.genre }}</p>
+            
+            </div>
+
+        </li>
     </ul>
   </div>
   <ng-template #noData>

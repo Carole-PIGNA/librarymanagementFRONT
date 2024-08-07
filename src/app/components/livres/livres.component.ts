@@ -11,19 +11,21 @@ export class LivresComponent implements OnInit {
 
   livreList: any[] = [];
 
-  constructor(private livreService: LivreService){}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    
-  this.livreService.getLivres().subscribe(
-    data =>{
-      console.log('Data from API:', data);
-      this.livreList = data;
-      
-    },
-    error =>{
-      console.error(" Error fetching List of Books",error);
-    }
-  )
+    this.fetchLivres();
+
   }
+
+  fetchLivres(){
+    this.http.get<any []>('http://localhost:8081/api/v1/livre/getlivres').subscribe(data => {
+      this.livreList = data;
+    });
+  }
+  getImageUrl(imagePath: string): string {
+    return `http://localhost:8081/images/${imagePath}`;
+  }
+
 }
+
