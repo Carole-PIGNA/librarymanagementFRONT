@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-addlivre',
-  templateUrl: './addlivre.component.html',
-  styleUrl: './addlivre.component.css'
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrl: './admin.component.css'
 })
-export class AddlivreComponent {
+export class AdminComponent {
   bookForm: FormGroup;
   selectedFile: File | null = null;
 
@@ -43,7 +43,6 @@ export class AddlivreComponent {
       console.error('Erreur:', error);
         });
   }
-
 
 
 }

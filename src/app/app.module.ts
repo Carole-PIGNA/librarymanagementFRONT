@@ -8,7 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { LivresComponent } from './components/livres/livres.component';
 import { LivreCardComponent } from './components/livre-card/livre-card.component';
 import { LivreService } from './services/livre.service';
-import { AddlivreComponent } from './components/addlivre/addlivre.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { AddlivreComponent } from './components/addlivre/addlivre.component';
     HeaderComponent,
     LivresComponent,
     LivreCardComponent,
-    AddlivreComponent,
+    AdminComponent
  
   ],
   imports: [
@@ -25,6 +27,7 @@ import { AddlivreComponent } from './components/addlivre/addlivre.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule, 
+    FormsModule
   ],
   providers: [LivreService],
   bootstrap: [AppComponent]

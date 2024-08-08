@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class LivresComponent implements OnInit {
 
   livreList: any[] = [];
+  searchTerm: string ='';
+  filteredBooksList: any[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -21,10 +23,34 @@ export class LivresComponent implements OnInit {
   fetchLivres(){
     this.http.get<any []>('http://localhost:8081/api/v1/livre/getlivres').subscribe(data => {
       this.livreList = data;
+      this.filteredBooksList = this.livreList;
     });
   }
   getImageUrl(imagePath: string): string {
     return `http://localhost:8081/images/${imagePath}`;
+  }
+
+  onSearch(): void {
+    if (this.searchTerm.trim() === '') {
+      this.filteredBooksList = this.livreList;
+    } else {
+      this.filteredBooksList = this.livreList.filter(livre => 
+        livre.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        livre.author.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        livre.genre.toLowerCase().includes(this.searchTerm.toLowerCase())
+      
+      
+      );
+
+    }
+  }
+
+  shouldHideImage(): boolean {
+    return this.searchTerm.trim() !== '';
+  }
+
+  shouldHideHomeComponent(): boolean {
+    return false;
   }
 
 }
