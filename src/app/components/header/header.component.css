@@ -1,9 +1,18 @@
 .header {
-    background-color: beige ;
-    height: 3em;
+    background-color: white ;
+    height: 5em;
     color: black;
     margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
+}
+
+#logo img {
+    height: 150px;
+    width: 150px;
+    margin-right: 10px;
 }
 
 .nav {
