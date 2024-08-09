@@ -39,6 +39,8 @@ export class AdminComponent {
 
     this.http.post('http://localhost:8081/api/v1/livre/postlivre', formData).subscribe(response => {
       console.log(response);
+      this.bookForm.reset();
+      this.selectedFile = null;
     }, error => {
       console.error('Erreur:', error);
         });

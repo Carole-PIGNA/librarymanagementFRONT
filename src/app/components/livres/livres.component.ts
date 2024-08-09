@@ -26,10 +26,7 @@ export class LivresComponent implements OnInit {
       this.filteredBooksList = this.livreList;
     });
   }
-  getImageUrl(imagePath: string): string {
-    return `http://localhost:8081/images/${imagePath}`;
-  }
-
+ 
   onSearch(): void {
     if (this.searchTerm.trim() === '') {
       this.filteredBooksList = this.livreList;

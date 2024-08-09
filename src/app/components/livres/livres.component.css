@@ -1,9 +1,3 @@
-.container {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
 
 .search-container {
     display: flex;
@@ -16,10 +10,7 @@
 
   }
 
-  .boutons-recherche{
-    background-color: white;
-    
-  }
+ 
   
   .search-container input {
     align-self: center;
@@ -49,16 +40,6 @@
 
 
 
-.livres-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-li {
-    list-style-type: none;
-}
-
 .img_intro img {
    
    position: relative;
@@ -68,4 +49,27 @@ li {
     height: 10%;
   
     margin-top:3em;
+}
+
+.card-container {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 16px; /* Espacement entre les cartes */
+
+    padding-top:50px;
+    width:90%;
+    margin-left: 5%;
+  
+}
+
+.livre-card{
+    box-sizing: border-box;
+    background-color: beige;
+    border-radius: 10px;
+  
+}
+
+h2{
+    text-align: center;
+    
 }
