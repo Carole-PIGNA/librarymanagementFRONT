@@ -1,0 +1,31 @@
+
+<h2>Liste des Emprunts</h2>
+<div *ngIf="empruntsList.length > 0 " class="emprunt-container">
+  
+    
+        <div *ngFor="let emprunt of empruntsList" class="emprunt-item">
+            <div class="livre">
+            <p><strong>Emprunteur:</strong> {{ emprunt.emprunteur }}</p>
+            <app-livre-card [livre]="emprunt.livre" [hideButton]="true" class="livre-card"></app-livre-card>
+            </div>
+          <div class="buttons-choice">
+            <button (click)="openModal()">Lire</button>
+            <button (click)="returnBook(emprunt.id)">Rendre</button> 
+          </div>
+         
+          
+        </div>
+   
+
+</div>
+<div *ngIf="empruntsList.length === 0">
+    <p>Aucun emprunt disponible.</p>
+</div>
+
+<!-- Modal -->
+<div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Vous pouvez commencer votre lecture en ligne...</h3>
+        <button (click)="closeModal()">Fermer</button>
+    </div>
+</div>

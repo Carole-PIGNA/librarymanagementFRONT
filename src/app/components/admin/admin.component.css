@@ -1,0 +1,67 @@
+/* admin-container.css */
+.admin-container {
+    max-width: 600px; /* Largeur maximale du conteneur */
+    margin: 5rem auto; /* Centrage du conteneur */
+    padding: 1rem 2rem; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #fff; /* Fond blanc */
+    font-family: Arial, sans-serif; /* Police élégante */
+  }
+  
+  .admin-container h2 {
+    font-size: 1.5rem; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 0.5rem; /* Espacement en bas */
+  }
+  
+  .admin-container p {
+    font-size: 1rem; /* Taille de la police */
+    color: #666; /* Couleur du texte */
+    margin-bottom: 1rem; /* Espacement en bas */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Colonne pour les éléments du formulaire */
+    gap: 1rem; /* Espacement entre les éléments */
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column; /* Colonne pour l'étiquette et le champ */
+  }
+  
+  form label {
+    font-size: 0.9rem; /* Taille de la police */
+    color: #444; /* Couleur du texte */
+    margin-bottom: 0.3rem; /* Espacement en bas */
+  }
+  
+  form input,
+  form select {
+    padding: 0.5rem; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+  }
+  
+  form input[type="file"] {
+    padding: 0; /* Enlever le padding pour les fichiers */
+  }
+  
+  button {
+    background-color: beige; /* Couleur du bouton */
+    color: black; /* Couleur du texte du bouton */
+    border: none; /* Enlever la bordure */
+    padding: 0.75rem 1.5rem; /* Espacement interne */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 1rem; /* Taille de la police */
+    cursor: pointer; /* Curseur pointer */
+    transition: background-color 0.3s; /* Transition pour le survol */
+  }
+  
+  button:hover {
+    background-color: gray; /* Couleur du bouton au survol */
+  }
+  

@@ -1,0 +1,101 @@
+/* Style global pour les cartes de livres */
+.carte-livre {
+    border: 1px solid #ddd; /* Bordure légère pour séparer les cartes */
+    border-radius: 8px; /* Coins arrondis pour un effet moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+    background-color: #f9f9f9; /* Couleur de fond de la carte */
+    padding: 16px; /* Espacement intérieur */
+    margin: 16px; /* Espacement extérieur */
+    text-align: center; /* Centre le texte */
+    max-width: 300px; /* Largeur maximale de la carte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation pour le survol */
+  }
+  
+  /* Style pour les images des livres */
+  .carte-livre img {
+    border-radius: 4px; /* Coins arrondis pour l'image */
+    width: 100px; /* Prend toute la largeur disponible */
+    height: 130px; /* Hauteur automatique pour maintenir le ratio d'aspect */
+  }
+  
+  /* Style pour le titre du livre */
+  .carte-livre h3 {
+    font-size: 1.2em; /* Taille du texte légèrement plus grande */
+    margin: 12px 0 8px 0; /* Marges autour du titre */
+    color: #333; /* Couleur du texte */
+  }
+  
+  /* Style pour les paragraphes */
+  .carte-livre p {
+    font-size: 0.9em; /* Taille du texte légèrement plus petite */
+    margin: 4px 0; /* Marges autour des paragraphes */
+    color: #666; /* Couleur du texte */
+  }
+  
+  /* Effet de survol pour la carte */
+  .carte-livre:hover {
+    transform: scale(1.02); /* Agrandit légèrement la carte */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+  }
+  
+  /* Style pour le fond de la page */
+  .page-background {
+    background-color: #eaeaea; /* Couleur de fond de la page */
+    padding: 20px; /* Espacement autour du contenu */
+    min-height: 100vh; /* Hauteur minimale pour couvrir toute la fenêtre */
+  }
+
+  .button-emprunter {
+    background-color: beige;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top:20px;
+  }
+  .button-emprunter:hover {
+    background-color: gray;
+  }
+  
+  .borrow-form {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+
+  .borrow-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .borrow-form label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .borrow-form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .borrow-form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .borrow-form button:hover {
+    background-color: #218838;
+  }
+  
+  

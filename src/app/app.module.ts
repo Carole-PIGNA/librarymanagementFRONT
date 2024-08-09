@@ -10,6 +10,7 @@ import { LivreCardComponent } from './components/livre-card/livre-card.component
 import { LivreService } from './services/livre.service';
 import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule } from '@angular/forms';
+import { EmpruntsComponent } from './emprunts/emprunts.component';
 
 
 
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     LivresComponent,
     LivreCardComponent,
-    AdminComponent
+    AdminComponent,
+    EmpruntsComponent
  
   ],
   imports: [
