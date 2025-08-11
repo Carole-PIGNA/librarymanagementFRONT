@@ -7,7 +7,11 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class LivreService {
 
+<<<<<<< HEAD
   private apiUrl = 'http://localhost:8081/api/livre/getlivres';
+=======
+  private apiUrl = 'http://localhost:8081/api/v1/livre/getlivres';
+>>>>>>> origin/main
 
   constructor( private http: HttpClient) { }
 
@@ -15,7 +19,11 @@ export class LivreService {
     return this.http.get<any>(`${this.apiUrl}?limit=60`);
   }  
   getEmprunts(): Observable<any[]> {
+<<<<<<< HEAD
     return this.http.get<any[]>(`http://localhost:8081/api/emprunt`);
+=======
+    return this.http.get<any[]>(`http://localhost:8081/api/v1/emprunt`);
+>>>>>>> origin/main
   }  
   getLivreById(livreId: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${livreId}`)
@@ -26,7 +34,11 @@ export class LivreService {
   }
 
   deleteEmpruntById(empruntId: number):Observable<any> {
+<<<<<<< HEAD
     return this.http.delete(`http://localhost:8081/api/emprunt/${empruntId}`);
+=======
+    return this.http.delete(`http://localhost:8081/api/v1/emprunt/${empruntId}`);
+>>>>>>> origin/main
   };
 
   private handleError(error: HttpErrorResponse) {

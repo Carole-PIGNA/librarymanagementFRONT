@@ -37,7 +37,11 @@ export class AdminComponent {
       formData.append('image', this.selectedFile);
     }
 
+<<<<<<< HEAD
     this.http.post('http://localhost:8081/api/livre/postlivre', formData).subscribe(response => {
+=======
+    this.http.post('http://localhost:8081/api/v1/livre/postlivre', formData).subscribe(response => {
+>>>>>>> origin/main
       console.log(response);
       this.bookForm.reset();
       this.selectedFile = null;

@@ -21,7 +21,11 @@ export class LivresComponent implements OnInit {
   }
 
   fetchLivres(){
+<<<<<<< HEAD
     this.http.get<any []>('http://localhost:8081/api/livre/getlivres').subscribe(data => {
+=======
+    this.http.get<any []>('http://localhost:8081/api/v1/livre/getlivres').subscribe(data => {
+>>>>>>> origin/main
       this.livreList = data;
       this.filteredBooksList = this.livreList;
     });
