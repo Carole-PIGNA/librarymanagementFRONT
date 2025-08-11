@@ -38,11 +38,7 @@ export class LivreCardComponent  implements OnInit  {
       formData.append('livreId', this.livre.id);
       formData.append('emprunteur',borrowerName);
 
-<<<<<<< HEAD
       this.http.post('http://localhost:8081/api/emprunt', formData).subscribe(response => {
-=======
-      this.http.post('http://localhost:8081/api/v1/emprunt', formData).subscribe(response => {
->>>>>>> origin/main
         console.log(response);
         this.borrowForm.reset();
         this.showBorrowForm = false;
