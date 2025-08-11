@@ -1,0 +1,17 @@
+<div *ngIf="livre" class="carte-livre">
+   
+        <img [src]="getImageUrl(livre.imagePath)" alt="{{ livre.title }}" style="width: 140px; height: 150px;">
+        <h3>{{ livre.title }} by {{ livre.author }}</h3>
+        <p>Publication Date: {{ livre.pub_date | date }}</p>
+        <p>Genre: {{ livre.genre }}</p>
+        <button *ngIf="!hideButton" class="button-emprunter" (click)="toggleBorrowForm()" >{{ showBorrowForm ? 'Annuler' : 'Emprunter' }}</button> 
+        <div *ngIf="showBorrowForm" class="borrow-form">
+            <form [formGroup]="borrowForm" (ngSubmit)="onBorrowSubmit()">
+              <div>
+                <label for="borrowerName">Nom de l'emprunteur:</label>
+                <input id="borrowerName" formControlName="borrowerName" placeholder="Entrez le nom">
+              </div>
+              <button type="submit">Confirmer l'emprunt</button>
+            </form>
+          </div>
+</div>

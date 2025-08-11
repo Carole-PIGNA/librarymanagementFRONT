@@ -1,0 +1,118 @@
+.emprunt-container {
+    padding: 20px;
+ 
+
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .emprunt-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .livre-card {
+    margin-bottom: 10px;
+  }
+  
+  .buttons-choice {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .buttons-choice button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .buttons-choice button:first-child {
+    background-color: #007bff; /* Couleur de fond pour "Lire" */
+    color: white;
+  }
+  
+  .buttons-choice button:last-child {
+    background-color: #28a745; /* Couleur de fond pour "Rendre" */
+    color: white;
+  }
+  
+  .buttons-choice button:hover {
+    transform: translateY(-2px); /* Légère élévation au survol */
+  }
+  
+  .buttons-choice button:active {
+    transform: translateY(0); /* Ramène le bouton à sa place */
+    background-color: #0056b3; /* Couleur plus foncée pour "Lire" */
+  }
+  
+  .buttons-choice button:last-child:active {
+    background-color: #218838; /* Couleur plus foncée pour "Rendre" */
+  }
+  /* Styles pour la fenêtre modale */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Assurez-vous que la modale est au-dessus du contenu */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .modal-content h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 600px) {
+    .emprunt-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .emprunt-item {
+      flex: 1 1 calc(33.333% - 20px); /* Trois éléments par ligne avec un espace de 20px entre eux */
+    }
+  }
+  

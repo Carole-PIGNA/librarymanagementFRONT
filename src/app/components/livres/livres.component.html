@@ -1,0 +1,27 @@
+<div *ngIf="!shouldHideHomeComponent()" class="container">
+    <div class="search-container">    
+        <input 
+          class="search-input"
+          type="text" 
+          placeholder="Recherchez un livre par son titre, son auteur ou son genre, ....." 
+          [(ngModel)]="searchTerm"
+          (input)="onSearch()">
+      </div>
+
+    <div *ngIf="!shouldHideImage()" class="img_intro">
+        <img src="https://github.com/Carole-PIGNA/Images/blob/main/li%20(1).png?raw=true" alt="banniere">
+    </div>
+    <h2 > Liste des livres de la bibliothèque</h2>
+    <div *ngIf="filteredBooksList.length; else noData" class="card-container">
+        <app-livre-card *ngFor="let livre of  filteredBooksList" [livre]="livre" class="livre-card"> </app-livre-card>
+    </div>
+   
+
+    <ng-template #noData>
+        <p>No books available.</p>
+    </ng-template>
+    <div *ngIf="filteredBooksList.length === 0 && livreList.length !== 0">
+        Loading...
+    </div>
+</div>
+  
