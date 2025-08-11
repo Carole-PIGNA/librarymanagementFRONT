@@ -11,6 +11,7 @@ import { LivreService } from './services/livre.service';
 import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule } from '@angular/forms';
 import { EmpruntsComponent } from './emprunts/emprunts.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -21,7 +22,8 @@ import { EmpruntsComponent } from './emprunts/emprunts.component';
     LivresComponent,
     LivreCardComponent,
     AdminComponent,
-    EmpruntsComponent
+    EmpruntsComponent,
+    RegisterComponent
  
   ],
   imports: [
